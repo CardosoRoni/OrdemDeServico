@@ -54,8 +54,8 @@ public class CadastroServlet extends HttpServlet {
 				data.equals("") & valor.equals("")){
 			response.getWriter().append("Preencha os campos");
 		} else {
-			MongoClient mongo = new MongoClient();// criando um clienteMongo
-			DB db = mongo.getDB("pessoa");// seleciona o banco no caso "contas"
+			MongoClient mongo = new MongoClient();// criando uma PessoaMongo
+			DB db = mongo.getDB("pessoas");// seleciona o banco no caso "pessoas"
 			PessoaDAO pessoaDAO = new PessoaDAOMongo(db);// o DAO onde gerencia as
 														// informaçoes
 	}
